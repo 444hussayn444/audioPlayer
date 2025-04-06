@@ -1,0 +1,82 @@
+.Search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10rem;
+  place-content: center;
+  background-color: rgba(2, 119, 165, 0.566);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Search-container .Search {
+  width: 80%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #579ec1;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  padding-left: 20px;
+  caret-color: white;
+  color: white;
+  transition: all ease 0.2s;
+
+}
+
+.lable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchIcon {
+  color: white;
+  background-color: #579ec1;
+  font-size: 40px;
+  height: 50px;
+  position: relative;
+  top: 2px;
+  border-top-right-radius: 10px;
+  padding-right: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all ease 0.2s;
+}
+
+.Search-container .Search::placeholder {
+  padding: 0px 5px;
+  font-size: 25px;
+  color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.SearchIcon:hover,.Search:hover {
+  cursor: pointer;
+  background-color: #2f85b0;
+  box-shadow: 0px 0px 10px 0px #2f85b0;
+}
+
+.tit{
+    color: whitesmoke;
+}
+
+/* media screen */
+
+
+
+@media (max-width:700px){
+    .Search-container{
+        margin-top: 20px;
+    }
+}

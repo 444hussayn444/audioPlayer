@@ -1,0 +1,109 @@
+/*  starting navbar styles */
+.navbar {
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgba(0, 183, 255, 0.189);
+  height: 100vh;
+  backdrop-filter: blur(12px);
+}
+
+.navbar .logo {
+  position: relative;
+  animation: spin 5s linear infinite;
+}
+
+.navbar .logo .logo-image {
+  width: 181px;
+  border-radius: 100%;
+}
+
+.navbar .links {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar .links .link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: ease 0.2s;
+}
+
+.navbar .links .link:active {
+  color: rgb(0, 222, 251);
+  text-shadow: 0px 0px 3px rgb(0, 222, 251);
+}
+
+.Active {
+  color: rgb(0, 222, 251) !important;
+  text-shadow: 0px 0px 3px rgb(0, 222, 251);
+}
+
+/* before and after options */
+
+.navbar .logo::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 56px;
+  left: 51px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 26px 0px rgba(0, 222, 251, 0.795);
+  animation: shadow 0.5s linear infinite;
+}
+/* all hovers and animation */
+.navbar .links .link:hover {
+  color: rgb(0, 222, 251);
+  /* text-shadow: 0px 0px 3px rgb(0, 222, 251); */
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 26px 0px rgba(211, 247, 251, 0.795);
+  }
+  25% {
+    box-shadow: 0px 0px 30px 0px rgba(211, 247, 251, 0.795);
+  }
+  50% {
+    box-shadow: 0px 0px 36px 0px rgba(2, 91, 102, 0.795);
+  }
+  75% {
+    box-shadow: 0px 0px 46px 0px rgba(211, 247, 251, 0.795);
+  }
+  100% {
+    box-shadow: 0px 0px 26px 0px rgba(211, 247, 251, 0.795);
+  }
+}
+
+/* here for making website responsive  */
+
+@media (max-width: 691px) {
+  .navbar{
+    width: 30%;
+  }
+  .navbar .logo .logo-image {
+    width: 101px;
+    border-radius: 100%;
+  }
+  .navbar .logo::before {
+    position: absolute;
+    content: "";
+    top: 17px;
+    left: 19px;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 26px 0px rgba(0, 222, 251, 0.795);
+    animation: shadow 0.5s linear infinite;
+  }
+}
