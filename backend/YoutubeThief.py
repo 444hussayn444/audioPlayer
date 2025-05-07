@@ -1,10 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
 import json
 import time
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import yt_dlp as YD
 import uuid
 import os
@@ -17,8 +14,6 @@ driver.get(f"https://www.youtube.com/@{userInput}/videos")
 time.sleep(3)
 
 videos =  []
-SCROLL_PAUSE_TIME = 1
-
 filename= "data.json"
 limmit = 3
 
